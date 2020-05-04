@@ -5,9 +5,32 @@
   <style>
     div#app { padding: 50px; margin: 30px auto; max-width: 600px; 
       border: 1px solid #ccc; box-shadow: 3px 3px 3px #aaa; font-size: 11pt; }
-    input { padding: 6px; width: 500px; }
-    div.error { background-color: #fcc; border: 1px solid red; 
-      padding: 10px; max-width: 500; margin-top: 30px; }
+    input[text] { padding: 6px; width: 500px; }
   </style>
 </head>
 <body>
+<body>
+  <div id="app">
+    <input type="text" v-model="total" />
+    <input type="button" v-on:click="plus" value="++" />
+    <input type="button" v-on:click="minus" value="--" />
+  </div>
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        total: 0,
+      },
+      methods: {
+        plus: function() {
+          this.total++;
+        },
+        minus: function() {
+          this.total--;
+        },
+      },
+    })
+  </script>
+</body>
+<html>
+
