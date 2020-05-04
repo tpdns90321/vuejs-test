@@ -6,14 +6,14 @@
     div#app { padding: 50px; margin: 30px auto; max-width: 600px; 
       border: 1px solid #ccc; box-shadow: 3px 3px 3px #aaa; font-size: 11pt; }
     input[text] { padding: 6px; width: 500px; }
+    button { padding: 5px; }
   </style>
 </head>
 <body>
-<body>
   <div id="app">
     <input type="text" v-model="total" />
-    <input type="button" v-on:click="plus" value="++" />
-    <input type="button" v-on:click="minus" value="--" />
+    <button v-on:click="plus">++</button>
+    <button v-on:click="minus">--</button>
   </div>
   <script>
     var app = new Vue({
